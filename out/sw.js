@@ -47,12 +47,9 @@ async function handleRemoteImage(remoteUrl) {
       cache: 'no-store',
       credentials: 'omit',
       mode: 'cors',
+      redirect: 'follow',
       referrer: `${target.origin}/`,
-      referrerPolicy: 'strict-origin-when-cross-origin',
-      headers: {
-        Accept: 'image/avif,image/webp,image/png,image/jpeg,image/gif,image/svg+xml,image/*,*/*;q=0.8',
-        'User-Agent': 'Mozilla/5.0 (compatible; Quizinal/1.0)',
-      },
+      referrerPolicy: 'origin',
     })
 
     if (!response.ok) return response
@@ -80,12 +77,9 @@ async function handleProxyImage(remoteUrl) {
       cache: 'no-store',
       credentials: 'omit',
       mode: 'cors',
+      redirect: 'follow',
       referrer: `${target.origin}/`,
-      referrerPolicy: 'strict-origin-when-cross-origin',
-      headers: {
-        Accept: 'image/avif,image/webp,image/png,image/jpeg,image/gif,image/svg+xml,image/*,*/*;q=0.8',
-        'User-Agent': 'Mozilla/5.0 (compatible; Quizinal/1.0)',
-      },
+      referrerPolicy: 'origin',
     })
 
     if (!response.ok) return response

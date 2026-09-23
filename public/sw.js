@@ -46,13 +46,10 @@ async function fetchRemoteImage(remoteUrl) {
     const response = await fetch(target.toString(), {
       cache: 'no-store',
       credentials: 'omit',
-      mode: 'no-cors',
+      mode: 'cors',
+      redirect: 'follow',
       referrer: `${target.origin}/`,
-      referrerPolicy: 'strict-origin-when-cross-origin',
-      headers: {
-        Accept: 'image/avif,image/webp,image/png,image/jpeg,image/gif,image/svg+xml,image/*,*/*;q=0.8',
-        'User-Agent': 'Mozilla/5.0 (compatible; Quizinal/1.0)',
-      },
+      referrerPolicy: 'origin',
     })
 
     const cache = await caches.open(CACHE_NAME)
