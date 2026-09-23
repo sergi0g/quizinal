@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { SWRegister } from '@/components/sw-register'
 import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
@@ -33,7 +32,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SWRegister />
           {children}
         </ThemeProvider>
       </body>
