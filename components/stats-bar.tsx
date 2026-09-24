@@ -53,27 +53,24 @@ export function StatsBar({
 
       <div className="flex items-center gap-3">
         <div
-          className="h-2.5 flex-1 overflow-hidden rounded-full flex gap-1"
+          className="h-2.5 flex-1 overflow-hidden rounded-full flex relative"
           role="progressbar"
           aria-valuenow={totalPct}
           aria-valuemin={0}
           aria-valuemax={100}
           aria-label="Mastery progress"
         >
-          <div
-            className="overflow-hidden rounded-full h-2.5 flex relative"
-            style={{ width: `${inProgressPct}%` }}
-          >
-            <div className="absolute h-full rounded-full bg-accent transition-[width] duration-500 w-full" />
+          <div style={{ width: `${masteredPct + inProgressPct}%` }}>
+            <div className="absolute h-full rounded-full bg-muted w-full" />
+            <div
+              className="absolute -top-1 -left-1 box-content h-full rounded-full bg-accent transition-[width] duration-500 border-4 border-background"
+              style={{ width: `${inProgressPct}%` }}
+            />
             <div
               className="absolute -top-1 -left-1 box-content h-full rounded-full bg-success transition-[width] duration-500 border-4 border-background"
-              style={{ width: `${(masteredPct / inProgressPct) * 100}%` }}
+              style={{ width: `${masteredPct}%` }}
             />
           </div>
-          <div
-            className="h-full rounded-full bg-muted transition-[width] duration-500"
-            style={{ width: `${100 - inProgressPct}%` }}
-          />
         </div>
         <span className="text-xs font-bold tabular-nums text-muted-foreground">
           {totalPct}%
