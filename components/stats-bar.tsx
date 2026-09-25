@@ -60,17 +60,15 @@ export function StatsBar({
           aria-valuemax={100}
           aria-label="Mastery progress"
         >
-          <div style={{ width: `${masteredPct + inProgressPct}%` }}>
             <div className="absolute h-full rounded-full bg-muted w-full" />
             <div
               className="absolute -top-1 -left-1 box-content h-full rounded-full bg-accent transition-[width] duration-500 border-4 border-background"
-              style={{ width: `${inProgressPct}%` }}
+              style={{ width: `${masteredPct + inProgressPct}%` }}
             />
             <div
               className="absolute -top-1 -left-1 box-content h-full rounded-full bg-success transition-[width] duration-500 border-4 border-background"
               style={{ width: `${masteredPct}%` }}
             />
-          </div>
         </div>
         <span className="text-xs font-bold tabular-nums text-muted-foreground">
           {totalPct}%
