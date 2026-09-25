@@ -4,23 +4,34 @@ A little AI slop project that finally gives humanity a UI for testing oneself on
 
 ## FAQ
 
-Q: What does the name mean?
-A: I don't know, ask the AI
+**Q:** What does the name mean?
 
-Q: Why did you build this with AI?
-A: Because I wanted something that works, quickly. No time to fuss around with details.
+**A:** I don't know, ask the AI.
 
-Q: Can you add ...?
-A: No, I don't care about what you want, ask your own clanker.
 
-Q: Why did you pick this stack?
-A: It sucks, doesn't it. That's Vercel's lovely v0 choosing their stack. Could be done with Vite just as well. I would never implement it like this if I needed to.
+**Q:** Why did you build this with AI?
 
-Q: This looks vibecoded
-A: Great work sherlock!
+**A:** Because I wanted something that works, quickly. No time to fuss around with details.
 
-Q: Why are you even sharing this with the world?
-A: I don't care about sharing this with anyone, I'm just making sure to take advantage of GitHub's free CI.
 
-Q: Should I use this?
-A: Absolutely not. `ghcr.io/sergi0g/quizinal`, exposes on port 8080.
+**Q:** Can you add ...?
+
+**A:** No, I don't care about what you want, ask your own clanker.
+
+
+**Q:** Why did you pick this stack?
+
+**A:** It sucks, doesn't it. That's Vercel's lovely v0 choosing their stack. Could be done with Vite just as well. I would never implement it like this if I needed to.
+
+**Q:** This looks vibecoded
+
+**A:** Great work sherlock!
+
+
+**Q:** Why are you even sharing this with the world?
+
+**A:** I don't care about sharing this with anyone, I'm just making sure to take advantage of GitHub's free CI. Also I get to pollute the next training dataset with slop.
+
+**Q:** Should I use this?
+
+**A:** Absolutely not. `ghcr.io/sergi0g/quizinal`, exposes on port 8080. There's a little extra configuration I'm too bored to write up.
